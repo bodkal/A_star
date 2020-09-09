@@ -1,0 +1,3 @@
+/home/koby/CLionProjects/D_star_lite_test/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/koby/CLionProjects/D_star_lite_test/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/koby/CLionProjects/D_star_lite_test/cmake-build-debug/CMakeFiles/D_star_lite_test.dir
