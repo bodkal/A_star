@@ -93,7 +93,7 @@ int main()
     //  vector<short*> path = dstar.move_and_replan(new_position);
 
     while (!path.size()){
-
+int a;
         new_position[0]=path[0][0];
         new_position[1]=path[0][1];
         dstar.new_edges_and_old_costs=slam.rescan(new_position);
