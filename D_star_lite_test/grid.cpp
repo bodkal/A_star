@@ -8,15 +8,16 @@
 //---------------class OccupancyGridMap-------------------------
     std::vector <short*> OccupancyGridMap::filter(short ** neighbors ,bool avoid_obstacles){
         std::vector <short*> good_neighbors;
+
         if (avoid_obstacles){
             for (int i = 0; i < 8; ++i) {
-                if (this->in_bounds(neighbors[i][0],neighbors[i][0])&& this->is_unoccupied(neighbors[i][0],neighbors[i][0]))
+                if (this->in_bounds(neighbors[i][0],neighbors[i][1]) && this->is_unoccupied(neighbors[i][0],neighbors[i][1]))
                     good_neighbors.push_back(neighbors[i]);
             }
             return good_neighbors;
         }
         for (int i = 0; i < 8; ++i) {
-            if (this->in_bounds(neighbors[i][0],neighbors[i][0]))
+            if (this->in_bounds(neighbors[i][0],neighbors[i][1]))
                 good_neighbors.push_back(neighbors[i]);
         }
         return good_neighbors;
@@ -48,7 +49,7 @@
     }
 
     bool OccupancyGridMap::in_bounds(int row, int col){
-        return 0 <= row &&row < this->x_dim && 0 <= col &&col< this->y_dim;
+        return 0 <= row && row < this->x_dim && 0 <= col &&col< this->y_dim;
     }
 
     std::vector <short*> OccupancyGridMap::succ(short vertex[2],bool avoid_obstacles) {
@@ -113,7 +114,14 @@
         else
             return ouder::heuristic(u, v);
     }
+Vertices SLAM::rescan(short global_position[2]) {
 
+    std::map< key,short> local_observation =this->ground_truth_map.local_observation(global_position,this->view_range);
+
+    Vertices vertices = this->update_changed_edge_costs(local_observation);
+
+    return vertices;//, this->slam_map}
+}
     Vertices SLAM::update_changed_edge_costs(std::map<key, short> local_grid) {
         short tmp[2];
         Vertices vertices;

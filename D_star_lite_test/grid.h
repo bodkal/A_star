@@ -30,12 +30,14 @@ public:
 class SLAM {
 private:
     OccupancyGridMap ground_truth_map{0, 0};
-    OccupancyGridMap slam_map{0, 0};
     short view_range;
 public:
+    OccupancyGridMap slam_map{0, 0};
+
     SLAM(OccupancyGridMap map, short view_range_choice);
     void set_ground_truth_map(OccupancyGridMap gt_map);
     float c(short u[2], short v[2]);
+    Vertices rescan(short global_position[2]);
     Vertices update_changed_edge_costs(std::map<key, short> local_grid);
 
 

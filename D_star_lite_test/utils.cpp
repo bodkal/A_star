@@ -1,6 +1,6 @@
 #include "utils.h"
 #include<bits/stdc++.h>
-    Vertex::Vertex(short pos_chois[2]):pos() {
+    Vertex::Vertex(short pos_chois[2]){//:pos() {
             this->pos[0] = pos_chois[0];
             this->pos[1] = pos_chois[1];
         }
@@ -37,6 +37,7 @@ void  Vertices::add_vertex(Vertex v){
             array2D[i][0] = list[i][0] + x;
             array2D[i][1] = list[i][1] + y;
         }
+
         return array2D;
     }
 bool ouder::lexicographic(K first,K secand){
