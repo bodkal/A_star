@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/koby/CLionProjects/D_star_lite_test/d_star_lite.cpp" "/home/koby/CLionProjects/D_star_lite_test/cmake-build-debug/CMakeFiles/D_star_lite_test.dir/d_star_lite.cpp.o"
-  "/home/koby/CLionProjects/D_star_lite_test/grid.cpp" "/home/koby/CLionProjects/D_star_lite_test/cmake-build-debug/CMakeFiles/D_star_lite_test.dir/grid.cpp.o"
-  "/home/koby/CLionProjects/D_star_lite_test/main.cpp" "/home/koby/CLionProjects/D_star_lite_test/cmake-build-debug/CMakeFiles/D_star_lite_test.dir/main.cpp.o"
-  "/home/koby/CLionProjects/D_star_lite_test/priority_queue.cpp" "/home/koby/CLionProjects/D_star_lite_test/cmake-build-debug/CMakeFiles/D_star_lite_test.dir/priority_queue.cpp.o"
-  "/home/koby/CLionProjects/D_star_lite_test/utils.cpp" "/home/koby/CLionProjects/D_star_lite_test/cmake-build-debug/CMakeFiles/D_star_lite_test.dir/utils.cpp.o"
+  "/home/koby/Desktop/cpp/D_star_lite_test/d_star_lite.cpp" "/home/koby/Desktop/cpp/D_star_lite_test/cmake-build-debug/CMakeFiles/D_star_lite_test.dir/d_star_lite.cpp.o"
+  "/home/koby/Desktop/cpp/D_star_lite_test/grid.cpp" "/home/koby/Desktop/cpp/D_star_lite_test/cmake-build-debug/CMakeFiles/D_star_lite_test.dir/grid.cpp.o"
+  "/home/koby/Desktop/cpp/D_star_lite_test/main.cpp" "/home/koby/Desktop/cpp/D_star_lite_test/cmake-build-debug/CMakeFiles/D_star_lite_test.dir/main.cpp.o"
+  "/home/koby/Desktop/cpp/D_star_lite_test/priority_queue.cpp" "/home/koby/Desktop/cpp/D_star_lite_test/cmake-build-debug/CMakeFiles/D_star_lite_test.dir/priority_queue.cpp.o"
+  "/home/koby/Desktop/cpp/D_star_lite_test/utils.cpp" "/home/koby/Desktop/cpp/D_star_lite_test/cmake-build-debug/CMakeFiles/D_star_lite_test.dir/utils.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -1,10 +1,10 @@
 #include<bits/stdc++.h>
-#include "utils.h"
+//#include "utils.h"
 #include "grid.h"
 #include "priority_queue.h"
 #include "d_star_lite.h"
-#define x_dims 20
-#define y_dims 20
+#define x_dims 50
+#define y_dims 50
 
 using namespace std;
 
@@ -62,17 +62,18 @@ void print_game(vector<short*> path,vector<short*> obs,short view_range,short x,
         }
         cout <<'|'<<endl;
     }
-    for (int j = 0; j < 20*2+1; ++j) {
+    for (int j = 0; j < x_dims*2+1; ++j) {
         cout << '_';
     }
+    cout<<endl;
 }
 int main()
 {
 
     short x_dim = x_dims;
     short y_dim = y_dims;
-    short start[] = {3, 3};
-    short goal []= {18, 19};
+    short start[] = {2, 3};
+    short goal []= {32, 15};
     short view_range = 5;
 
     OccupancyGridMap  new_map(x_dim,y_dim);
@@ -86,11 +87,11 @@ int main()
     vector<short*> obs;
 
 
-    //print_game(path,obs,5,goal[0],goal[1]) ;
 
     vector<short*> path = dstar.move_and_replan(new_position);
 
     //  vector<short*> path = dstar.move_and_replan(new_position);
+    print_game(path,obs,5,goal[0],goal[1]) ;
 
     while (!path.size()){
 int a;

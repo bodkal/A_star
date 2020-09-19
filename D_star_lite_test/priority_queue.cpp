@@ -9,9 +9,12 @@
         this->k2=tmp_k2;
     }
 
-    bool Priority::__lt__(K other){
+    bool Priority::bigger(K other){
         return this->k1 < other.k1 or (this->k1 == other.k1 and this->k2 < other.k2);
     }
+bool Priority::smoler(K other){
+    return this->k1 > other.k1 or (this->k1 == other.k1 and this->k2 > other.k2);
+}
     bool Priority::__le__(K other){
         return this->k1 < other.k1 or (this->k1 == other.k1 and this->k2 <= other.k2);
     }
@@ -27,7 +30,10 @@ PriorityNode::PriorityNode(K tmp_priority,short tmp_vertex[2]){
     bool PriorityNode::__le__(K other) {
         return this->priority.k1 < other.k1 or (this->priority.k1 == other.k1 and this->priority.k2 < other.k2);
     }
-    bool PriorityNode::__lt__(K other) {
+    bool PriorityNode::smoler(K other){
+    return this->priority.k1 > other.k1 or (this->priority.k1 == other.k1 and this->priority.k2 > other.k2);
+}
+    bool PriorityNode::bigger(K other) {
         return this->priority.k1 < other.k1 or (this->priority.k1 == other.k1 and this->priority.k2 <= other.k2);
     }
 
@@ -45,20 +51,31 @@ PriorityNode::PriorityNode(K tmp_priority,short tmp_vertex[2]){
     void PriorityQueue::insert(short vertex[2],K priority){
         PriorityNode  item(priority, vertex);
         this->vertices_in_heap.push_back(vertex);
-        this->heap.push_back(item);
-        this->_siftdown(0, this->heap.size() - 1);
+        int i;
+        for (i=0; i <this->heap.size() ; ++i) {
+            if(this->heap[i].smoler(priority)){
+                break;
+            }
+        }
+        this->heap.insert(this->heap.begin()+i,item);//push_back(item);
+     //  this->_siftdown(0, this->heap.size() - 1);
     }
 
     void PriorityQueue::remove(short vertex[2]){
         this->vertices_in_heap.erase(std::remove( this->vertices_in_heap.begin(),  this->vertices_in_heap.end(), vertex),  this->vertices_in_heap.end());
         for (int i = 0; i < this->heap.size(); ++i) {
-            if (this->heap[i].vertex[0]==vertex[0]&&this->heap[i].vertex[1]==vertex[1]){
-                this->heap[i] = this->heap[this->heap.size() - 1];
-                this->heap.erase(this->heap.end());
+            if (this->heap[i].vertex[0]==vertex[0]&&this->heap[i].vertex[1]==vertex[1]) {
+                this->heap.erase(this->heap.begin()+i);
                 break;
             }
         }
-        this->build_heap();
+        for (int i = 0; i < this->vertices_in_heap.size(); ++i) {
+            if(this->vertices_in_heap[i][0]==vertex[0] &&this->vertices_in_heap[i][1]==vertex[1]){
+                this->vertices_in_heap.erase(this->vertices_in_heap.begin()+i);
+                break;
+            }
+        }
+     //   this->build_heap();
     }
     void PriorityQueue::update(short vertex[2],K priority) {
         for (int i = 0; i < this->heap.size(); ++i) {
@@ -67,8 +84,8 @@ PriorityNode::PriorityNode(K tmp_priority,short tmp_vertex[2]){
                 this->heap[i].priority = priority;
             }
             break;
-            this->build_heap();
         }
+      //  this->build_heap();
 
     }
     void PriorityQueue::build_heap(){
@@ -85,7 +102,7 @@ PriorityNode::PriorityNode(K tmp_priority,short tmp_vertex[2]){
         while (pos>startpos){
             parentpos=(pos - 1) >> 1;
             parent=this->heap[parentpos];
-            if(newitem.__lt__(parent.priority)){
+            if(newitem.bigger(parent.priority)){
                 this->heap[pos]=parent;
                 pos = parentpos;
                 continue;
@@ -103,7 +120,7 @@ PriorityNode::PriorityNode(K tmp_priority,short tmp_vertex[2]){
         short childpos = 2 * pos + 1;
         while( childpos < endpos){
             rightpos = childpos + 1;
-            if (rightpos < endpos && !(this->heap[childpos].__lt__(this->heap[rightpos].priority))) {
+            if (rightpos < endpos && !(this->heap[childpos].bigger(this->heap[rightpos].priority))) {
                 childpos = rightpos;
             }
             this->heap[pos] = this->heap[childpos];

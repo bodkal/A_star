@@ -13,8 +13,10 @@ public:
     float k1;
     float k2;
     Priority(float tmp_k1, float tmp_k2);
-    bool __lt__(K other);
-    bool __le__(K other);
+    bool bigger(K other);
+    bool smoler(K other);
+
+        bool __le__(K other);
 };
 
 class PriorityNode {
@@ -23,7 +25,9 @@ public:
     short vertex[2];
     PriorityNode(K tmp_priority,short tmp_vertex[2]);
     bool __le__(K other);
-    bool __lt__(K other);
+    bool smoler(K other);
+
+    bool bigger(K other);
 };
 
 class PriorityQueue {
