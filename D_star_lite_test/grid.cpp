@@ -45,7 +45,6 @@
 
     bool OccupancyGridMap::is_unoccupied(int row, int col){
         return this->occupancy_grid_map[row][col] == UNOCCUPIED;
-
     }
 
     bool OccupancyGridMap::in_bounds(int row, int col){
@@ -88,10 +87,13 @@
                 if(this->in_bounds(x,y)){
                     //tmp[0]=x;
                     // tmp[1]=y;
+
                     nodes[{x,y}]=(1-this->is_unoccupied(x,y))*255;
                 }
             }
         }
+
+
         return nodes;
     }
 
@@ -109,30 +111,31 @@
     }
 
     float  SLAM::c(short u[2], short v[2]) {
-        if (this->slam_map.is_unoccupied(u[0], u[1]) || !slam_map.is_unoccupied(v[0], v[1]))
+        if (!this->slam_map.is_unoccupied(u[0], u[1]) || !slam_map.is_unoccupied(v[0], v[1]))
             return std::numeric_limits<float>::infinity();
         else
             return ouder::heuristic(u, v);
     }
-Vertices SLAM::rescan(short global_position[2]) {
 
-    std::map< key,short> local_observation =this->ground_truth_map.local_observation(global_position,this->view_range);
 
-    Vertices vertices = this->update_changed_edge_costs(local_observation);
 
-    return vertices;//, this->slam_map}
+SLAM::all  SLAM::rescan(short global_position[2]) {
+        SLAM::all tmp;
+        std::map< key,short> local_observation=this->ground_truth_map.local_observation(global_position,this->view_range);
+        tmp.vertices = this->update_changed_edge_costs(local_observation);
+        tmp.tmp_map =this->slam_map;
+
+        return tmp;
 }
     Vertices SLAM::update_changed_edge_costs(std::map<key, short> local_grid) {
-        short tmp[2];
         Vertices vertices;
         for (auto const &i:local_grid) {
             if (i.second == OBSTACLE) {
                 if (this->slam_map.is_unoccupied(i.first.x, i.first.y)) {
-                    tmp[1] = i.first.y;
-                    tmp[0] = i.first.x;
-                    Vertex v(tmp);
-                    std::vector<short *> succ = this->slam_map.succ(tmp);
-                    for (auto const &u:succ) {
+
+                    Vertex v(new short[2]{i.first.x,i.first.y});
+                  //  std::vector<short *> succ =
+                    for (short * const &u:this->slam_map.succ(v.pos)) {
                         v.add_edge_with_cost(u, this->c(u, v.pos));
                     }
                     vertices.add_vertex(v);
@@ -140,10 +143,9 @@ Vertices SLAM::rescan(short global_position[2]) {
                 }
             } else {
                 if (!this->slam_map.is_unoccupied(i.first.x, i.first.y)) {
-                    tmp[1] = i.first.y;
-                    tmp[0] = i.first.x;
-                    Vertex v(tmp);
-                    std::vector<short *> succ = this->slam_map.succ(tmp);
+
+                    Vertex v(new short[2]{i.first.x,i.first.y});
+                    std::vector<short *> succ = this->slam_map.succ( v.pos);
                     for (auto const &u:succ) {
                         v.add_edge_with_cost(u, this->c(u, v.pos));
                     }

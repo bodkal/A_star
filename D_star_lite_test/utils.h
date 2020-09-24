@@ -17,20 +17,20 @@ struct key{
 };
 
 class Vertex{
-private:
-    std::map<key,float>edges_and_costs;
 public:
     short pos[2];
     Vertex(short pos_chois[2]);
+    std::map<key,float> get_edges_and_c_old();
     void add_edge_with_cost(short succ[2],float cost);
-    std::map<key,float> edges_and_c_old() ;
+    std::map<key,float> edges_and_c_old ;
+    std::map<key,float>edges_and_costs;
 
     };
 
 class Vertices{
-    std::vector<Vertex>list;
 public:
    // Vertices();
+   std::vector<Vertex>list;
     void add_vertex(Vertex v);
     std::vector<Vertex> get_vertices();
 

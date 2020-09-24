@@ -80,7 +80,7 @@ PriorityNode::PriorityNode(K tmp_priority,short tmp_vertex[2]){
     void PriorityQueue::update(short vertex[2],K priority) {
         for (int i = 0; i < this->heap.size(); ++i) {
 
-            if (this->heap[i].vertex[0]==vertex[0]&&this->heap[i].vertex[1]==vertex[1]) {
+            if (this->heap[i].vertex[0]==vertex[0] && this->heap[i].vertex[1]==vertex[1]) {
                 this->heap[i].priority = priority;
             }
             break;

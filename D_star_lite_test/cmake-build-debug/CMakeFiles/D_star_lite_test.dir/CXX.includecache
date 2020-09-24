@@ -6,29 +6,25 @@
 
 #IncludeRegexTransform: 
 
-/home/koby/Desktop/cpp/D_star_lite_test/d_star_lite.h
-utils.h
-/home/koby/Desktop/cpp/D_star_lite_test/utils.h
-grid.h
-/home/koby/Desktop/cpp/D_star_lite_test/grid.h
-priority_queue.h
-/home/koby/Desktop/cpp/D_star_lite_test/priority_queue.h
-
-/home/koby/Desktop/cpp/D_star_lite_test/grid.h
-utils.h
-/home/koby/Desktop/cpp/D_star_lite_test/utils.h
-bits/stdc++.h
--
-
-/home/koby/Desktop/cpp/D_star_lite_test/main.cpp
-bits/stdc++.h
--
-grid.h
-/home/koby/Desktop/cpp/D_star_lite_test/grid.h
-priority_queue.h
-/home/koby/Desktop/cpp/D_star_lite_test/priority_queue.h
+/home/koby/Desktop/cpp/D_star_lite_test/d_star_lite.cpp
 d_star_lite.h
 /home/koby/Desktop/cpp/D_star_lite_test/d_star_lite.h
+stdio.h
+-
+
+/home/koby/Desktop/cpp/D_star_lite_test/d_star_lite.h
+utils.h
+/home/koby/Desktop/cpp/D_star_lite_test/utils.h
+grid.h
+/home/koby/Desktop/cpp/D_star_lite_test/grid.h
+priority_queue.h
+/home/koby/Desktop/cpp/D_star_lite_test/priority_queue.h
+
+/home/koby/Desktop/cpp/D_star_lite_test/grid.h
+utils.h
+/home/koby/Desktop/cpp/D_star_lite_test/utils.h
+bits/stdc++.h
+-
 
 /home/koby/Desktop/cpp/D_star_lite_test/priority_queue.h
 utils.h

@@ -1,16 +1,18 @@
 #include "utils.h"
 #include<bits/stdc++.h>
-    Vertex::Vertex(short pos_chois[2]){//:pos() {
+    Vertex::Vertex(short pos_chois[2]){
             this->pos[0] = pos_chois[0];
             this->pos[1] = pos_chois[1];
         }
 
     void Vertex::add_edge_with_cost(short succ[2],float cost){
-        if (succ[0] != this->pos[0] &&succ[1] != this->pos[1])
-            this->edges_and_costs[{succ[0],succ[1]}] = cost;
+        if (succ[0] != this->pos[0] && succ[1] != this->pos[1]) {
+            this->edges_and_costs[{succ[0], succ[1]}] = cost;
+            this->edges_and_c_old[{succ[0], succ[1]}] = cost;
+        }
     }
 
-    std::map<key,float> Vertex::edges_and_c_old() {
+    std::map<key,float> Vertex::get_edges_and_c_old() {
         return this->edges_and_costs;
     }
 
