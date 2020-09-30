@@ -63,6 +63,27 @@ DStarLite::DStarLite(OccupancyGridMap map,short s_start[2],short s_goal[2]):rhs(
     }
 
     bool DStarLite::compute_shortest_path(){
+        std::cout <<"--------------------------------(g,rhs)--------------------------------" <<std::endl;
+        for (int i = 0; i < 15; ++i) {
+            for (int j = 0; j < 15; ++j) {
+                if(round(this->g[j][i]) > 1000 && round(this->rhs[j][i]) > 1000) {
+                    std::cout <<"(i,i)"<<"\t";
+                }
+                else if(round(this->rhs[j][i])>1000 )
+                    std::cout <<"("<<round(this->g[j][i])<<",i)\t";
+
+                else if(round(this->g[j][i])>1000 )
+                    std::cout <<"(i,"<<round(this->rhs[j][i] )<<")\t";
+
+                else if(i!=this->s_start[1] || j!=this->s_start[0])
+                    std::cout << "("<<round(this->g[j][i]) << ","<<round(this->rhs[j][i]) <<")\t";
+                else
+                    std::cout <<  "( * )"<<"\t" ;
+
+            }
+            std::cout << std::endl;
+        }
+
         short tmp[]={-1,-1};
         Vertex u(tmp);
         short * tmp1=u.pos;
@@ -73,7 +94,9 @@ DStarLite::DStarLite(OccupancyGridMap map,short s_start[2],short s_goal[2]):rhs(
         float g_old;
         float temp;
         std::vector <short * > pred;
+
         while (ouder::lexicographic(this->U.top_key() , this->calculate_key(this->s_start)) || this->rhs[this->s_start[0]][this->s_start[1]] > this->g[this->s_start[0]][this->s_start[1]]){
+
             u = this->U.top();
             k_old = this->U.top_key();
             k_new = this->calculate_key(u.pos);
@@ -129,111 +152,97 @@ Vertices DStarLite::rescan(){
     return  tmp_new_edges_and_old_costs;
 }
 std::vector<short*> DStarLite::move_and_replan(short robot_position[]){
+
         Vertices changed_edges_with_old_cost;
     std::vector<Vertex> temp_vec;
         short temp_list[2];
-        short arg_min[2];
+        //short arg_min[2];
         float min_s;
         float temp;
         short v[2];
         float c_new;
-    std::vector<short*> path;
+        std::vector<short*> path;
         path.push_back(robot_position);
         this->s_last[0]=this->s_start[0] = robot_position[0];
         this->s_last[1]=this->s_start[1] = robot_position[1];
         this->compute_shortest_path();
         while (this->s_start[0] != this->s_goal[0] || this->s_start[1] != this->s_goal[1]) {
-     /*       for (int i = 0; i < 20; ++i) {
-                for (int j = 0; j < 20; ++j) {
-                    std::cout << "\t" << round(this->g[i][j]);
-                }
-                std::cout << std::endl;
-            }*/
+
             bool a = this->rhs[this->s_start[0]][this->s_start[1]] == inf;
             if (a) {std::cout << "There is no known path!" << std::endl;}
 
             min_s = inf;
             for (short* const& s_:this->sensed_map.succ(this->s_start)) {
                 temp = this->c(this->s_start, s_) + this->g[s_[0]][s_[1]];
-                if (temp <= min_s) {
+
+                if (temp < min_s) {
                     min_s = temp;
-                    arg_min[0] = s_[0];
-                    arg_min[1] = s_[1];
+                    this->s_start[0] = s_[0];
+                    this->s_start[1] = s_[1];
                 }
             }
-            this->s_start[0] = arg_min[0];
-            this->s_start[1] = arg_min[1];
-           // std::cout<<s_start[0]<<","<<s_start[1]<<std::endl;
 
-            //   short * t=new short[2];
-          //  short * t{};
-            path.push_back(new short[2]{arg_min[0],arg_min[1]});
+            path.push_back(new short[2]{this->s_start[0],this->s_start[1]});
             changed_edges_with_old_cost = this->rescan();
-            if(changed_edges_with_old_cost.get_vertices().size() !=0){
+            if(changed_edges_with_old_cost.get_vertices().size() !=0) {
                 this->k_m += ouder::heuristic(this->s_last, this->s_start);
                 this->s_last[0] = this->s_start[0];
                 this->s_last[1] = this->s_start[1];
-                temp_vec=changed_edges_with_old_cost.get_vertices();
+                temp_vec = changed_edges_with_old_cost.get_vertices();
+
                 for (int i = 0; i < temp_vec.size(); ++i) {
 
                     v[0] = temp_vec[i].pos[0];
                     v[1] = temp_vec[i].pos[1];
 
+                    for (auto const &items: temp_vec[i].edges_and_c_old) {
+                        c_new = this->c(new short[2]{items.first.x, items.first.y}, v);
 
-                    for (auto const& items: temp_vec[i].edges_and_c_old) {
-                        c_new = this->c(new short [2]{items.first.x,items.first.y}, v);
                         if (items.second > c_new) {
                             if (items.first.x != this->s_goal[0] && items.first.y != this->s_goal[1]) {
                                 this->rhs[items.first.x][items.first.y] = std::min(
                                         this->rhs[items.first.x][items.first.y],
-                                        this->c(new short [2]{items.first.x,items.first.y}, v) + this->g[v[0]][v[1]]);
+                                        this->c(new short[2]{items.first.x, items.first.y}, v) + this->g[v[0]][v[1]]);
                             }
-                        }
-                            else if(rhs[items.first.x][items.first.y] == items.second + this->g[v[0]][v[1]]){
+                        } else if (rhs[items.first.x][items.first.y] == items.second + this->g[v[0]][v[1]]) {
 
-                                if (items.first.x != this->s_goal[0] && items.first.y != this->s_goal[1]){
-                                    min_s =inf;
+                            if (items.first.x != this->s_goal[0] && items.first.y != this->s_goal[1]) {
+                                min_s = inf;
 
-                                    for (short* const& s_:this->sensed_map.succ(new short [2]{items.first.x,items.first.x})) {
-                                        temp_list[0] =items.first.x;
-                                        temp_list[1]=items.first.y;
-                                        temp = this->c(temp_list, s_) + this->g[s_[0]][s_[1]];
-                                        if (min_s > temp){
-                                            min_s = temp;
-                                        }
+                                for (short *const &s_:this->sensed_map.succ(
+                                        new short[2]{items.first.x, items.first.x})) {
+                                    temp_list[0] = items.first.x;
+                                    temp_list[1] = items.first.y;
+                                    temp = this->c(temp_list, s_) + this->g[s_[0]][s_[1]];
+                                    if (min_s > temp) {
+                                        min_s = temp;
                                     }
-                                    this->rhs[items.first.x][items.first.y] = min_s;
-
                                 }
-                                temp_list[0] =items.first.x;
-                                temp_list[1]=items.first.y;
-                                this->update_vertex(temp_list);
+                                this->rhs[items.first.x][items.first.y] = min_s;
 
                             }
-
+                            temp_list[0] = items.first.x;
+                            temp_list[1] = items.first.y;
+                            this->update_vertex(temp_list);
 
                         }
+
 
                     }
 
+                }
 
             }
             this->compute_shortest_path();
+
         }
 
-    for (int i = 0; i < 20; ++i) {
-        for (int j = 0; j < 20; ++j) {
-            std::cout << "\t" << round(this->rhs[j][i]);
-        }
-        std::cout << std::endl;
-    }
-    std::cout << "----------------------------------------------"<<std::endl;
+
         std::cout<<"path found!"<<std::endl;
-    for(auto const& i: path){
+   // for(auto const& i: path)
+     //   std::cout<<i[0]<<","<<i[1]<<std::endl;
 
-        std::cout<<i[0]<<","<<i[1]<<std::endl;
-    }
-        return path;
+    return path;
     }
 
 

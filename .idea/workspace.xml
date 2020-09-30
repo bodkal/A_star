@@ -1,28 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="D_star_lite_test" targetName="D_star_lite_test" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="aed7872c-39c1-40b8-b972-798deddf6f57" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/cpp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cpp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/D_star_lite_test/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/D_star_lite_test/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/D_star_lite_test/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/D_star_lite_test/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/D_star_lite_test/cmake-build-debug/CMakeFiles/D_star_lite_test.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/D_star_lite_test/cmake-build-debug/CMakeFiles/D_star_lite_test.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/D_star_lite_test/cmake-build-debug/CMakeFiles/D_star_lite_test.dir/d_star_lite.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/D_star_lite_test/cmake-build-debug/CMakeFiles/D_star_lite_test.dir/d_star_lite.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/D_star_lite_test/cmake-build-debug/CMakeFiles/D_star_lite_test.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/D_star_lite_test/cmake-build-debug/CMakeFiles/D_star_lite_test.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/D_star_lite_test/cmake-build-debug/CMakeFiles/D_star_lite_test.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/D_star_lite_test/cmake-build-debug/CMakeFiles/D_star_lite_test.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/D_star_lite_test/cmake-build-debug/CMakeFiles/D_star_lite_test.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/D_star_lite_test/cmake-build-debug/CMakeFiles/D_star_lite_test.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/D_star_lite_test/cmake-build-debug/CMakeFiles/D_star_lite_test.dir/grid.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/D_star_lite_test/cmake-build-debug/CMakeFiles/D_star_lite_test.dir/grid.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/D_star_lite_test/cmake-build-debug/CMakeFiles/D_star_lite_test.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/D_star_lite_test/cmake-build-debug/CMakeFiles/D_star_lite_test.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/D_star_lite_test/cmake-build-debug/CMakeFiles/D_star_lite_test.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/D_star_lite_test/cmake-build-debug/CMakeFiles/D_star_lite_test.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/D_star_lite_test/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/D_star_lite_test/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/D_star_lite_test/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/D_star_lite_test/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/D_star_lite_test/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/D_star_lite_test/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/D_star_lite_test/cmake-build-debug/D_star_lite_test" beforeDir="false" afterPath="$PROJECT_DIR$/D_star_lite_test/cmake-build-debug/D_star_lite_test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/D_star_lite_test/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/D_star_lite_test/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/D_star_lite_test/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/D_star_lite_test/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/D_star_lite_test/d_star_lite.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/D_star_lite_test/d_star_lite.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/D_star_lite_test/grid.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/D_star_lite_test/grid.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/D_star_lite_test/grid.h" beforeDir="false" afterPath="$PROJECT_DIR$/D_star_lite_test/grid.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/D_star_lite_test/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/D_star_lite_test/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/D_star_lite_test/priority_queue.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/D_star_lite_test/priority_queue.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1hdO6k0yROE4jVAKK8nVp1ehTi4" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/D_star_lite_test/CMakeLists.txt" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
+  <component name="RunManager">
+    <configuration name="D_star_lite_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="D_star_lite_test" TARGET_NAME="D_star_lite_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="D_star_lite_test" RUN_TARGET_NAME="D_star_lite_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -34,10 +90,80 @@
       <option name="presentableId" value="Default" />
       <updated>1600337328125</updated>
       <workItem from="1600337329275" duration="91000" />
+      <workItem from="1601289352598" duration="7937000" />
+      <workItem from="1601373160829" duration="1742000" />
+      <workItem from="1601375837333" duration="390000" />
+      <workItem from="1601376360947" duration="6899000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="751" y="297" key="#xdebugger.evaluate" timestamp="1601377838682">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="751" y="297" key="#xdebugger.evaluate/67.27.1853.1053/1920.0.1024.1280@67.27.1853.1053" timestamp="1601377838682" />
+    <state width="612" height="506" key="DebuggerActiveHint" timestamp="1601298109460">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="612" height="506" key="DebuggerActiveHint/67.27.1853.1053/1920.0.1024.1280@67.27.1853.1053" timestamp="1601298109460" />
+    <state x="167" y="127" width="1653" height="855" key="DiffContextDialog" timestamp="1601375391280">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="167" y="127" width="1653" height="855" key="DiffContextDialog/67.27.1853.1053/1920.0.1024.1280@67.27.1853.1053" timestamp="1601375391280" />
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1601289378676">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1024.1280@67.27.1853.1053" timestamp="1601289378676" />
+    <state width="1807" height="103" key="GridCell.Tab.0.bottom" timestamp="1601381845006">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="978" height="853" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1024.1280@1920.0.1024.1280" timestamp="1601377766395" />
+    <state width="1807" height="103" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1024.1280@67.27.1853.1053" timestamp="1601381845006" />
+    <state width="1807" height="103" key="GridCell.Tab.0.center" timestamp="1601381845006">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="978" height="853" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1024.1280@1920.0.1024.1280" timestamp="1601377766395" />
+    <state width="1807" height="103" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1024.1280@67.27.1853.1053" timestamp="1601381845006" />
+    <state width="1807" height="103" key="GridCell.Tab.0.left" timestamp="1601381845006">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="978" height="853" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1024.1280@1920.0.1024.1280" timestamp="1601377766394" />
+    <state width="1807" height="103" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1024.1280@67.27.1853.1053" timestamp="1601381845006" />
+    <state width="1807" height="103" key="GridCell.Tab.0.right" timestamp="1601381845006">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="978" height="853" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1024.1280@1920.0.1024.1280" timestamp="1601377766395" />
+    <state width="1807" height="103" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1024.1280@67.27.1853.1053" timestamp="1601381845006" />
+    <state width="1807" height="103" key="GridCell.Tab.1.bottom" timestamp="1601381844951">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="978" height="853" key="GridCell.Tab.1.bottom/67.27.1853.1053/1920.0.1024.1280@1920.0.1024.1280" timestamp="1601377766712" />
+    <state width="1807" height="103" key="GridCell.Tab.1.bottom/67.27.1853.1053/1920.0.1024.1280@67.27.1853.1053" timestamp="1601381844951" />
+    <state width="1807" height="103" key="GridCell.Tab.1.center" timestamp="1601381844951">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="978" height="853" key="GridCell.Tab.1.center/67.27.1853.1053/1920.0.1024.1280@1920.0.1024.1280" timestamp="1601377766712" />
+    <state width="1807" height="103" key="GridCell.Tab.1.center/67.27.1853.1053/1920.0.1024.1280@67.27.1853.1053" timestamp="1601381844951" />
+    <state width="1807" height="103" key="GridCell.Tab.1.left" timestamp="1601381844951">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="978" height="853" key="GridCell.Tab.1.left/67.27.1853.1053/1920.0.1024.1280@1920.0.1024.1280" timestamp="1601377766712" />
+    <state width="1807" height="103" key="GridCell.Tab.1.left/67.27.1853.1053/1920.0.1024.1280@67.27.1853.1053" timestamp="1601381844951" />
+    <state width="1807" height="103" key="GridCell.Tab.1.right" timestamp="1601381844951">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="978" height="853" key="GridCell.Tab.1.right/67.27.1853.1053/1920.0.1024.1280@1920.0.1024.1280" timestamp="1601377766712" />
+    <state width="1807" height="103" key="GridCell.Tab.1.right/67.27.1853.1053/1920.0.1024.1280@67.27.1853.1053" timestamp="1601381844951" />
+    <state x="482" y="187" key="SettingsEditor" timestamp="1601380721662">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="482" y="187" key="SettingsEditor/67.27.1853.1053/1920.0.1024.1280@67.27.1853.1053" timestamp="1601380721662" />
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1601376101825">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053/1920.0.1024.1280@67.27.1853.1053" timestamp="1601376101825" />
   </component>
 </project>

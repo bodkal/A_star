@@ -29,11 +29,10 @@ public:
 
 class SLAM {
 private:
-    OccupancyGridMap ground_truth_map{0, 0};
     short view_range;
 
 public:
-
+    OccupancyGridMap ground_truth_map{0, 0};
     OccupancyGridMap slam_map{0, 0};
     struct all{
         OccupancyGridMap tmp_map{0, 0};

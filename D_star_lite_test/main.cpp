@@ -3,8 +3,8 @@
 #include "grid.h"
 #include "priority_queue.h"
 #include "d_star_lite.h"
-#define x_dims 20
-#define y_dims 20
+#define x_dims 15
+#define y_dims 15
 
 using namespace std;
 
@@ -49,21 +49,28 @@ void print_game(vector<short*> path,vector<pair<short,short>> obs,short view_ran
     }
 
     bord[x][y] = '@';
+    cout << "\t";
 
-    for (int j = 0; j < x_dims*2+1; ++j) {
-        cout << '_';
+    for (int j = 0; j < x_dims; ++j) {
+        cout << j << "\t";
+    }
+    cout << endl<<"\t";
+    for (int j = 0; j < x_dims; ++j) {
+        cout << '_'<<"\t";
     }
     cout<<endl;
     for (int j = 0; j < y_dims; ++j) {
-        cout<<'|';
+        cout<<j<<"\t"<<'|';
 
         for (int i = 0; i < x_dims; ++i) {
-            cout<<bord[i][j]<<' ';
+            cout<<bord[i][j]<<"\t";
         }
         cout <<'|'<<endl;
     }
-    for (int j = 0; j < x_dims*2+1; ++j) {
-        cout << '_';
+    cout<<"\t";
+
+    for (int j = 0; j < x_dims; ++j) {
+        cout << '_'<<"\t";
     }
     cout<<endl;
 }
@@ -73,7 +80,7 @@ int main()
     short x_dim = x_dims;
     short y_dim = y_dims;
     short start[] = {3, 3};
-    short goal []= {8, 19};
+    short goal []= {8, 14};
     short view_range = 5;
 
     OccupancyGridMap  new_map(x_dim,y_dim);
@@ -105,16 +112,21 @@ int main()
 */
     //print_game(path,obs,5,start[0],start[1]) ;
     vector<short*> path = dstar.move_and_replan(new_position);
-    new_map.set_obstacle(1, 5);
-    new_map.set_obstacle(2, 5);
-    new_map.set_obstacle(3, 5);
-    new_map.set_obstacle(4, 5);
-    obs.push_back({1,5});
-    obs.push_back({2,5});
-    obs.push_back({3,5});
-    obs.push_back({4,5});
-
+    for (int i = 1; i < 6; ++i) {
+        new_map.set_obstacle(i, 6);
+        obs.push_back({i,6});
+    }
+    for (int i = 6; i < 10; ++i) {
+        new_map.set_obstacle(i, 10);
+        obs.push_back({i,10});
+    }
+/*
+    for (int i = 3; i < 19; ++i) {
+        new_map.set_obstacle(i, 9);
+        obs.push_back({i,9});
+    }*/
     slam.set_ground_truth_map(new_map);
+
     using namespace std;
 
     int chois;
@@ -147,6 +159,7 @@ int main()
             }
             case 3:{
 
+                std::cout   <<"-----------------------"<<std::endl;
             new_position[0] = path[1][0];
             new_position[1] = path[1][1];
             SLAM::all tmp = slam.rescan(new_position);
@@ -154,7 +167,7 @@ int main()
             dstar.new_edges_and_old_costs = tmp.vertices;
             dstar.sensed_map = tmp.tmp_map;
             path = dstar.move_and_replan(new_position);
-            print_game(path, obs, 5, new_position[0], new_position[1]);
+         //   print_game(path, obs, 5, new_position[0], new_position[1]);
                 break;}
             default: {
                 cout << "wrong input";

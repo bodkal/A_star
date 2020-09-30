@@ -54,9 +54,7 @@
     std::vector <short*> OccupancyGridMap::succ(short vertex[2],bool avoid_obstacles) {
         int x= vertex[0];
         int y= vertex[1];
-
         short ** movements=ouder::get_movements_8n(x,y);
-
         //  if ((x + y) % 2 == 0){
         //     movements.reverse()}
 
@@ -80,14 +78,9 @@
         short px = global_position[0];
         short py = global_position[1];
 
-        // array<short, 2> tmp={0,0};
-
         for (short x = px - view_range; x <  px + view_range + 1; ++x) {
             for (short y = py - view_range; y < py + view_range + 1; ++y) {
                 if(this->in_bounds(x,y)){
-                    //tmp[0]=x;
-                    // tmp[1]=y;
-
                     nodes[{x,y}]=(1-this->is_unoccupied(x,y))*255;
                 }
             }

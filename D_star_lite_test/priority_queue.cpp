@@ -41,6 +41,7 @@ PriorityNode::PriorityNode(K tmp_priority,short tmp_vertex[2]){
     Vertex PriorityQueue::top(){
         return this->heap[0].vertex;
     }
+
     K PriorityQueue::top_key(){
         if(!this->heap.size()){
             return {std::numeric_limits<float>::infinity(),std::numeric_limits<float>::infinity()};
