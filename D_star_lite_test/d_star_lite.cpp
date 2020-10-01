@@ -6,7 +6,7 @@
 #define inf std::numeric_limits<float>::infinity();
 #include <stdio.h>
 
-DStarLite::DStarLite(OccupancyGridMap map,short s_start[2],short s_goal[2]):rhs(std::vector<std::vector<float>>(map.y_dim)),sensed_map(map.x_dim,map.x_dim){
+DStarLite::DStarLite(OccupancyGridMap map,short s_start[2],short s_goal[2]):rhs(std::vector<std::vector<float>>(map.y_dim)),g(std::vector<std::vector<float>>(map.y_dim)),sensed_map(map.x_dim,map.x_dim){
         s_last[0]= this->s_start[0]=s_start[0];
         s_last[1]=this->s_start[1]=s_start[1];
 
@@ -14,16 +14,17 @@ DStarLite::DStarLite(OccupancyGridMap map,short s_start[2],short s_goal[2]):rhs(
         this->s_goal[1]=s_goal[1];
 
         for (int i = 0; i < map.y_dim; ++i) {
-            rhs[i]=std::vector<float>(map.x_dim);
+            this->rhs[i]=std::vector<float>(map.x_dim);
+            this->g[i]=std::vector<float>(map.x_dim);
             for (int j = 0; j < map.x_dim; ++j) {
                 this->rhs[i][j]=inf;
+                this->g[i][j]=inf;
             }
         }
-        this->g=this->rhs;
 
     this->rhs[s_goal[0]][s_goal[1]] = 0;
 
-        this->U.insert(s_goal, {ouder::heuristic(s_start,s_goal),0});
+        this->U.heap.push_back({{ouder::heuristic(s_start,s_goal),0},s_goal});//insert(s_goal, {ouder::heuristic(s_start,s_goal),0});
     }
 
     K  DStarLite::calculate_key(short s[2]){
@@ -36,17 +37,14 @@ DStarLite::DStarLite(OccupancyGridMap map,short s_start[2],short s_goal[2]):rhs(
         if (!this->sensed_map.is_unoccupied(u[0], u[1]) || !this->sensed_map.is_unoccupied(v[0], v[1])) {
             return inf;
         }
-        else {
-            return ouder::heuristic(u, v);
-        }
+        return ouder::heuristic(u, v);
     }
 
     bool DStarLite::contain(short u[2]) {
-        for (int i = 0; i < this->U.vertices_in_heap.size(); ++i) {
-            if(this->U.vertices_in_heap[i][0]==u[0] &&this->U.vertices_in_heap[i][1]==u[1]){
+        for (int i = 0; i < this->U.heap.size(); ++i) {
+            if(this->U.heap[i].vertex[0]==u[0] &&this->U.heap[i].vertex[1]==u[1]){
                 return true;
             }
-                //return  std::count(this->U.vertices_in_heap.begin(), this->U.vertices_in_heap.end(), u);
             }
         return false;
     }
@@ -65,6 +63,12 @@ DStarLite::DStarLite(OccupancyGridMap map,short s_start[2],short s_goal[2]):rhs(
     bool DStarLite::compute_shortest_path(){
         std::cout <<"--------------------------------(g,rhs)--------------------------------" <<std::endl;
         for (int i = 0; i < 15; ++i) {
+            std::cout<<"\t  "<<i<<"  ";
+        }
+        std::cout<<std::endl;
+
+        for (int i = 0; i < 15; ++i) {
+            std::cout<<i<<"\t";
             for (int j = 0; j < 15; ++j) {
                 if(round(this->g[j][i]) > 1000 && round(this->rhs[j][i]) > 1000) {
                     std::cout <<"(i,i)"<<"\t";
@@ -100,6 +104,7 @@ DStarLite::DStarLite(OccupancyGridMap map,short s_start[2],short s_goal[2]):rhs(
             u = this->U.top();
             k_old = this->U.top_key();
             k_new = this->calculate_key(u.pos);
+
             if (ouder::lexicographic(k_old , k_new)){
                 this->U.update(u.pos, k_new);
             }
@@ -153,10 +158,8 @@ Vertices DStarLite::rescan(){
 }
 std::vector<short*> DStarLite::move_and_replan(short robot_position[]){
 
-        Vertices changed_edges_with_old_cost;
+    Vertices changed_edges_with_old_cost;
     std::vector<Vertex> temp_vec;
-        short temp_list[2];
-        //short arg_min[2];
         float min_s;
         float temp;
         short v[2];
@@ -174,7 +177,7 @@ std::vector<short*> DStarLite::move_and_replan(short robot_position[]){
             min_s = inf;
             for (short* const& s_:this->sensed_map.succ(this->s_start)) {
                 temp = this->c(this->s_start, s_) + this->g[s_[0]][s_[1]];
-
+std::cout<<temp<<"\t"<<s_[0]<<","<<s_[1]<<std::endl;
                 if (temp < min_s) {
                     min_s = temp;
                     this->s_start[0] = s_[0];
@@ -208,22 +211,17 @@ std::vector<short*> DStarLite::move_and_replan(short robot_position[]){
 
                             if (items.first.x != this->s_goal[0] && items.first.y != this->s_goal[1]) {
                                 min_s = inf;
-
-                                for (short *const &s_:this->sensed_map.succ(
-                                        new short[2]{items.first.x, items.first.x})) {
-                                    temp_list[0] = items.first.x;
-                                    temp_list[1] = items.first.y;
-                                    temp = this->c(temp_list, s_) + this->g[s_[0]][s_[1]];
+                                auto pp=this->sensed_map.succ(new short[2]{items.first.x, items.first.x});
+                                for (short *const &s_:pp) {
+                                    temp = this->c(new short[2]{items.first.x, items.first.x}, s_) + this->g[s_[0]][s_[1]];
                                     if (min_s > temp) {
                                         min_s = temp;
                                     }
                                 }
                                 this->rhs[items.first.x][items.first.y] = min_s;
-
                             }
-                            temp_list[0] = items.first.x;
-                            temp_list[1] = items.first.y;
-                            this->update_vertex(temp_list);
+
+                            this->update_vertex(new short[2]{items.first.x, items.first.x});
 
                         }
 
@@ -239,6 +237,11 @@ std::vector<short*> DStarLite::move_and_replan(short robot_position[]){
 
 
         std::cout<<"path found!"<<std::endl;
+    for (int i = 0; i < 15; ++i) {
+        for (int j = 0; j < 15; ++j) {
+            this->g[i][j] =this->rhs[i][j];
+        }
+    }
    // for(auto const& i: path)
      //   std::cout<<i[0]<<","<<i[1]<<std::endl;
 

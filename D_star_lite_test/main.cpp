@@ -13,7 +13,7 @@ void print_game(vector<short*> path,vector<pair<short,short>> obs,short view_ran
     char bord[x_dims][y_dims];
     for (int j = 0; j < y_dims; ++j) {
         for (int i = 0; i < x_dims; ++i) {
-            bord[j][i]=' ';
+            bord[i][j]=' ';
         }
     }
 
@@ -49,7 +49,7 @@ void print_game(vector<short*> path,vector<pair<short,short>> obs,short view_ran
     }
 
     bord[x][y] = '@';
-    cout << "\t";
+    cout << " \t ";
 
     for (int j = 0; j < x_dims; ++j) {
         cout << j << "\t";
@@ -112,19 +112,19 @@ int main()
 */
     //print_game(path,obs,5,start[0],start[1]) ;
     vector<short*> path = dstar.move_and_replan(new_position);
-    for (int i = 1; i < 6; ++i) {
+    for (int i = 2; i < 9; ++i) {
         new_map.set_obstacle(i, 6);
         obs.push_back({i,6});
     }
-    for (int i = 6; i < 10; ++i) {
-        new_map.set_obstacle(i, 10);
-        obs.push_back({i,10});
+
+    for (int i = 3; i < 5; ++i) {
+        new_map.set_obstacle(i, 11);
+        obs.push_back({i,11});
     }
-/*
-    for (int i = 3; i < 19; ++i) {
-        new_map.set_obstacle(i, 9);
-        obs.push_back({i,9});
-    }*/
+    for (int i =6; i < 12; ++i) {
+        new_map.set_obstacle(i, 11);
+        obs.push_back({i,11});
+    }
     slam.set_ground_truth_map(new_map);
 
     using namespace std;
@@ -155,19 +155,21 @@ int main()
                 }
                 new_map.remove_obstacle(row, col);
                 slam.set_ground_truth_map(new_map);
+
                 break;
             }
             case 3:{
 
-                std::cout   <<"-----------------------"<<std::endl;
+               // std::cout   <<"-----------------------------------------------"<<std::endl;
             new_position[0] = path[1][0];
             new_position[1] = path[1][1];
             SLAM::all tmp = slam.rescan(new_position);
-
-            dstar.new_edges_and_old_costs = tmp.vertices;
-            dstar.sensed_map = tmp.tmp_map;
+            if(tmp.vertices.get_vertices().size()) {
+                dstar.new_edges_and_old_costs = tmp.vertices;
+                dstar.sensed_map = tmp.tmp_map;
+            }
             path = dstar.move_and_replan(new_position);
-         //   print_game(path, obs, 5, new_position[0], new_position[1]);
+
                 break;}
             default: {
                 cout << "wrong input";

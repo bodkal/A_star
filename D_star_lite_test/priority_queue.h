@@ -33,8 +33,7 @@ public:
 class PriorityQueue {
 public:
     std::vector<PriorityNode> heap;
-    //std::vector<Vertex> vertices_in_heap;
-    std::vector<short*> vertices_in_heap;
+    //std::vector<short*> vertices_in_heap;
 
   //  PriorityQueue();
     Vertex top();

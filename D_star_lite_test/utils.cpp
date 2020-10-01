@@ -6,7 +6,7 @@
         }
 
     void Vertex::add_edge_with_cost(short succ[2],float cost){
-        if (succ[0] != this->pos[0] && succ[1] != this->pos[1]) {
+        if (!(succ[0] == this->pos[0] && succ[1] == this->pos[1])) {
             this->edges_and_costs[{succ[0], succ[1]}] = cost;
             this->edges_and_c_old[{succ[0], succ[1]}] = cost;
         }
@@ -26,8 +26,8 @@ void  Vertices::add_vertex(Vertex v){
     }
 
     //ouder();
-     float ouder::heuristic(short p[2],short q[0]) {
-        return sqrt((p[0] - q[0]) *(p[0] - q[0]) + (p[1] - q[1]) *(p[1] - q[1]));
+     float ouder::heuristic(short p[2],short q[2]) {
+        return sqrt(pow(p[0] - q[0],2)  + pow(p[1] - q[1],2) );
     }
 
     short ** ouder::get_movements_8n(short x,short y) {

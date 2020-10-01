@@ -50,43 +50,39 @@ PriorityNode::PriorityNode(K tmp_priority,short tmp_vertex[2]){
     }
 
     void PriorityQueue::insert(short vertex[2],K priority){
-        PriorityNode  item(priority, vertex);
-        this->vertices_in_heap.push_back(vertex);
         int i;
         for (i=0; i <this->heap.size() ; ++i) {
             if(this->heap[i].smoler(priority)){
                 break;
             }
         }
-        this->heap.insert(this->heap.begin()+i,item);//push_back(item);
-     //  this->_siftdown(0, this->heap.size() - 1);
+        this->heap.insert(this->heap.begin()+i,{priority, vertex});
+
+        //this->_siftdown(0, this->heap.size() - 1);
     }
 
     void PriorityQueue::remove(short vertex[2]){
-        this->vertices_in_heap.erase(std::remove( this->vertices_in_heap.begin(),  this->vertices_in_heap.end(), vertex),  this->vertices_in_heap.end());
-        for (int i = 0; i < this->heap.size(); ++i) {
+        int i;
+        for (i= 0; i < this->heap.size(); ++i) {
             if (this->heap[i].vertex[0]==vertex[0]&&this->heap[i].vertex[1]==vertex[1]) {
-                this->heap.erase(this->heap.begin()+i);
+               // this->vertices_in_heap.erase(this->vertices_in_heap.begin()+i);
                 break;
             }
         }
-        for (int i = 0; i < this->vertices_in_heap.size(); ++i) {
-            if(this->vertices_in_heap[i][0]==vertex[0] &&this->vertices_in_heap[i][1]==vertex[1]){
-                this->vertices_in_heap.erase(this->vertices_in_heap.begin()+i);
-                break;
-            }
-        }
-     //   this->build_heap();
+        this->heap.erase(this->heap.begin()+i);
+
+           this->build_heap();
     }
     void PriorityQueue::update(short vertex[2],K priority) {
-        for (int i = 0; i < this->heap.size(); ++i) {
-
+        int i;
+        for (i = 0; i < this->heap.size(); ++i) {
             if (this->heap[i].vertex[0]==vertex[0] && this->heap[i].vertex[1]==vertex[1]) {
-                this->heap[i].priority = priority;
             }
             break;
         }
-      //  this->build_heap();
+        this->heap[i].priority = priority;
+
+        this->build_heap();
 
     }
     void PriorityQueue::build_heap(){

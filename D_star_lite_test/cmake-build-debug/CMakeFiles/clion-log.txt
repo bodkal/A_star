@@ -1,4 +1,4 @@
-/opt/cmake-3.18.2-Linux-x86_64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/koby/Desktop/cpp/D_star_lite_test
+/home/koby/clion-2020.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/koby/Desktop/cpp/D_star_lite_test
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/koby/Desktop/cpp/D_star_lite_test/cmake-build-debug
