@@ -1,0 +1,4 @@
+/home/koby/clion-2020.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE=/home/koby/vcpkg/scripts/buildsystems/vcpkg.cmake -G "CodeBlocks - Unix Makefiles" /home/koby/Desktop/cpp/A_star_lite
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/koby/Desktop/cpp/A_star_lite/cmake-build-release

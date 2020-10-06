@@ -32,6 +32,8 @@ public:
             return x < o.x || (x == o.x && y < o.y);
         }
     };
+    static float inf();
+    static bool is_equal(pos u,pos v);
 
     static float heuristic(pos u,pos v);
     static std::vector<pos>get_movements(pos point);

@@ -16,3 +16,9 @@ std::vector<utils::pos> utils::get_movements(pos point){
         }
         return list;
 }
+bool  utils::is_equal(pos u,pos v){
+    return (u.x==v.x && u.y==v.y);
+}
+float utils::inf(){
+    return std::numeric_limits<float>::infinity();
+}

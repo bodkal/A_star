@@ -1,0 +1,3 @@
+/home/koby/Desktop/cpp/A_star_lite/cmake-build-release/CMakeFiles/rebuild_cache.dir
+/home/koby/Desktop/cpp/A_star_lite/cmake-build-release/CMakeFiles/edit_cache.dir
+/home/koby/Desktop/cpp/A_star_lite/cmake-build-release/CMakeFiles/A_star.dir

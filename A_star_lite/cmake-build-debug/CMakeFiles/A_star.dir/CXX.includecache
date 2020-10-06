@@ -6,23 +6,55 @@
 
 #IncludeRegexTransform: 
 
-/home/koby/Desktop/cpp/A_star/A_star_lite.cpp
-A_star_lite.h
-/home/koby/Desktop/cpp/A_star/A_star_lite.h
-
-/home/koby/Desktop/cpp/A_star/A_star_lite.h
+/home/koby/Desktop/cpp/A_star_lite/A_star_lite.h
 utils.h
-/home/koby/Desktop/cpp/A_star/utils.h
+/home/koby/Desktop/cpp/A_star_lite/utils.h
 grid.h
-/home/koby/Desktop/cpp/A_star/grid.h
+/home/koby/Desktop/cpp/A_star_lite/grid.h
 
-/home/koby/Desktop/cpp/A_star/grid.h
+/home/koby/Desktop/cpp/A_star_lite/grid.h
 bits/stdc++.h
 -
 utils.h
-/home/koby/Desktop/cpp/A_star/utils.h
+/home/koby/Desktop/cpp/A_star_lite/utils.h
 
-/home/koby/Desktop/cpp/A_star/utils.h
+/home/koby/Desktop/cpp/A_star_lite/main.cpp
+iostream
+-
+grid.h
+/home/koby/Desktop/cpp/A_star_lite/grid.h
+A_star_lite.h
+/home/koby/Desktop/cpp/A_star_lite/A_star_lite.h
+matplotlibcpp.h
+-
+
+/home/koby/Desktop/cpp/A_star_lite/utils.h
 bits/stdc++.h
+-
+
+/home/koby/vcpkg/packages/matplotlib-cpp_x64-linux/include/matplotlibcpp.h
+python3.6/Python.h
+-
+vector
+-
+map
+-
+array
+-
+numeric
+-
+algorithm
+-
+stdexcept
+-
+iostream
+-
+cstdint
+-
+functional
+-
+numpy/arrayobject.h
+-
+opencv2/opencv.hpp
 -
 

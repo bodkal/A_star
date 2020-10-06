@@ -1,16 +1,4 @@
-/opt/cmake-3.18.2-Linux-x86_64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/koby/Desktop/cpp/A_star
--- The C compiler identification is GNU 7.5.0
--- The CXX compiler identification is GNU 7.5.0
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Check for working C compiler: /usr/bin/cc - skipped
--- Detecting C compile features
--- Detecting C compile features - done
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Check for working CXX compiler: /usr/bin/c++ - skipped
--- Detecting CXX compile features
--- Detecting CXX compile features - done
+/home/koby/clion-2020.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE=/home/koby/vcpkg/scripts/buildsystems/vcpkg.cmake find_path(MATPLOTLIB_CPP_INCLUDE_DIRS matplotlibcpp.h) target_include_directories(main PRIVATE ${MATPLOTLIB_CPP_INCLUDE_DIRS}) env PATH=/opt/ros/melodic/bin:/home/koby/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/include/python3.6 -G "CodeBlocks - Unix Makefiles" /home/koby/Desktop/cpp/A_star_lite
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/koby/Desktop/cpp/A_star/cmake-build-debug
+-- Build files have been written to: /home/koby/Desktop/cpp/A_star_lite/cmake-build-debug

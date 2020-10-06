@@ -5,45 +5,47 @@
 		<Option title="A_star"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\vcpkg\;CMake Files\..\..\..\vcpkg\scripts\;CMake Files\..\..\..\vcpkg\scripts\buildsystems\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/koby/Desktop/cpp/A_star/cmake-build-debug"/>
+				<Option working_dir="/home/koby/Desktop/cpp/A_star_lite/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star_lite/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star_lite/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star_lite/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star_lite/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/koby/Desktop/cpp/A_star/cmake-build-debug"/>
+				<Option working_dir="/home/koby/Desktop/cpp/A_star_lite/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star_lite/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star_lite/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star_lite/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star_lite/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/koby/Desktop/cpp/A_star/cmake-build-debug"/>
+				<Option working_dir="/home/koby/Desktop/cpp/A_star_lite/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star_lite/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star_lite/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star_lite/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star_lite/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="A_star">
-				<Option output="/home/koby/Desktop/cpp/A_star/cmake-build-debug/A_star" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/koby/Desktop/cpp/A_star/cmake-build-debug"/>
+			<Target title="A_star_lite">
+				<Option output="/home/koby/Desktop/cpp/A_star_lite/cmake-build-debug/A_star_lite" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/koby/Desktop/cpp/A_star_lite/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/usr/include/python2.7"/>
+					<Add directory="/home/koby/.local/lib/python2.7/site-packages/numpy/core/include"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -54,19 +56,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star/cmake-build-debug/Makefile&quot;  VERBOSE=1 A_star"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star_lite/cmake-build-debug/Makefile&quot;  VERBOSE=1 A_star_lite"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star_lite/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star_lite/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star_lite/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="A_star/fast">
-				<Option output="/home/koby/Desktop/cpp/A_star/cmake-build-debug/A_star" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/koby/Desktop/cpp/A_star/cmake-build-debug"/>
+			<Target title="A_star_lite/fast">
+				<Option output="/home/koby/Desktop/cpp/A_star_lite/cmake-build-debug/A_star_lite" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/koby/Desktop/cpp/A_star_lite/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/usr/include/python2.7"/>
+					<Add directory="/home/koby/.local/lib/python2.7/site-packages/numpy/core/include"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -77,36 +81,39 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star/cmake-build-debug/Makefile&quot;  VERBOSE=1 A_star/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star_lite/cmake-build-debug/Makefile&quot;  VERBOSE=1 A_star_lite/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star_lite/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star_lite/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/koby/Desktop/cpp/A_star_lite/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/koby/Desktop/cpp/A_star/A_star_lite.cpp">
-			<Option target="A_star"/>
+		<Unit filename="/home/koby/Desktop/cpp/A_star_lite/A_star_lite.cpp">
+			<Option target="A_star_lite"/>
 		</Unit>
-		<Unit filename="/home/koby/Desktop/cpp/A_star/A_star_lite.h">
-			<Option target="A_star"/>
+		<Unit filename="/home/koby/Desktop/cpp/A_star_lite/A_star_lite.h">
+			<Option target="A_star_lite"/>
 		</Unit>
-		<Unit filename="/home/koby/Desktop/cpp/A_star/grid.cpp">
-			<Option target="A_star"/>
+		<Unit filename="/home/koby/Desktop/cpp/A_star_lite/grid.cpp">
+			<Option target="A_star_lite"/>
 		</Unit>
-		<Unit filename="/home/koby/Desktop/cpp/A_star/grid.h">
-			<Option target="A_star"/>
+		<Unit filename="/home/koby/Desktop/cpp/A_star_lite/grid.h">
+			<Option target="A_star_lite"/>
 		</Unit>
-		<Unit filename="/home/koby/Desktop/cpp/A_star/main.cpp">
-			<Option target="A_star"/>
+		<Unit filename="/home/koby/Desktop/cpp/A_star_lite/main.cpp">
+			<Option target="A_star_lite"/>
 		</Unit>
-		<Unit filename="/home/koby/Desktop/cpp/A_star/utils.cpp">
-			<Option target="A_star"/>
+		<Unit filename="/home/koby/Desktop/cpp/A_star_lite/utils.cpp">
+			<Option target="A_star_lite"/>
 		</Unit>
-		<Unit filename="/home/koby/Desktop/cpp/A_star/utils.h">
-			<Option target="A_star"/>
+		<Unit filename="/home/koby/Desktop/cpp/A_star_lite/utils.h">
+			<Option target="A_star_lite"/>
 		</Unit>
-		<Unit filename="/home/koby/Desktop/cpp/A_star/CMakeLists.txt">
+		<Unit filename="/home/koby/Desktop/cpp/A_star_lite/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/koby/Desktop/cpp/A_star_lite/../../../vcpkg/scripts/buildsystems/vcpkg.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\scripts\buildsystems\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

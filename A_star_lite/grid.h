@@ -24,6 +24,7 @@ public:
     void set_obstacle(struct utils::pos point) ;
     void remove_obstacle(struct utils::pos point);
     void print_map();
+    bool vesited(utils::pos point);
 
   //  std::vector <short*> neighbors(utils::pos);
 
