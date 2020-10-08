@@ -27,7 +27,7 @@ public:
     A_star_lite(utils::pos start,utils::pos goal,world board,std::vector<utils::pos> obs);
     void sort_and_insert_to_open_list(utils::pos point);
     void remove_form_open_list();
-    utils::pos pop();
+
     std::vector<utils::pos> filtered_move(utils::pos father);
     void print();
     void path_search();

@@ -24,7 +24,7 @@ return (point.x>=0 && point.x < this->x_dim) && (point.y>=0 && point.y < this->y
 }
 
 bool  world::vesited(utils::pos point){
-    return !(this->get_priority({point.x, point.y}).g == maxval);
+    return (this->get_g(point) < maxval);
 }
 
 void world::set_obstacle(struct utils::pos point){
@@ -34,11 +34,25 @@ void world::set_obstacle(struct utils::pos point){
 utils::priority world::get_priority(struct utils::pos point){
     return this->GridMap[point.y][point.x];
 }
+float world::get_g( utils::pos point){
+    return this->GridMap[point.y][point.x].g;
+}
+float world::get_h( utils::pos point){
+    return this->GridMap[point.y][point.x].h;
+}
+float world::get_f( utils::pos point){
+    return this->GridMap[point.y][point.x].f;
+}
+
 
 void world::set_priority(utils::pos new_point,utils::pos goal,utils::pos father){
-    this->GridMap[new_point.y][new_point.x].h=utils::heuristic(new_point,goal);
-    this->GridMap[new_point.y][new_point.x].g=utils::heuristic(new_point,father)+this->GridMap[father.y][father.x].g;
-    this->GridMap[new_point.y][new_point.x].f= this->GridMap[new_point.y][new_point.x].g+ this->GridMap[new_point.y][new_point.x].h;
+    float h=utils::heuristic(new_point,goal);
+    float g=utils::heuristic(new_point,father)+this->GridMap[father.y][father.x].g;
+    this->GridMap[new_point.y][new_point.x]={g,h,g+h};
+    // this->GridMap[new_point.y][new_point.x].h=h;
+    //   this->GridMap[new_point.y][new_point.x].g=g;
+    //  this->GridMap[new_point.y][new_point.x].f= h+g;
+
 }
 void world::change_g(utils::pos new_point,float g){
 

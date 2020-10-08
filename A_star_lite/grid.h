@@ -18,13 +18,17 @@ public:
     void set_priority(utils::pos new_point,utils::pos goal,utils::pos father);
     void change_g(utils::pos new_point,float g);
 
-        std::vector<std::vector<utils::priority>> get_map();
+    std::vector<std::vector<utils::priority>> get_map();
     bool is_unoccupied(struct utils::pos point);
     bool in_bounds(struct utils::pos point);
     void set_obstacle(struct utils::pos point) ;
     void remove_obstacle(struct utils::pos point);
     void print_map();
     bool vesited(utils::pos point);
+
+    float get_g(struct utils::pos point);
+    float get_h(struct utils::pos point);
+    float get_f(struct utils::pos point);
 
   //  std::vector <short*> neighbors(utils::pos);
 
