@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/koby/Desktop/cpp/A_star_lite_huristic/A_star_lite.cpp
+A_star_lite.h
+/home/koby/Desktop/cpp/A_star_lite_huristic/A_star_lite.h
+
+/home/koby/Desktop/cpp/A_star_lite_huristic/A_star_lite.h
+utils.h
+/home/koby/Desktop/cpp/A_star_lite_huristic/utils.h
+grid.h
+/home/koby/Desktop/cpp/A_star_lite_huristic/grid.h
+
+/home/koby/Desktop/cpp/A_star_lite_huristic/grid.h
+bits/stdc++.h
+-
+utils.h
+/home/koby/Desktop/cpp/A_star_lite_huristic/utils.h
+
+/home/koby/Desktop/cpp/A_star_lite_huristic/main.cpp
+iostream
+-
+grid.h
+/home/koby/Desktop/cpp/A_star_lite_huristic/grid.h
+A_star_lite.h
+/home/koby/Desktop/cpp/A_star_lite_huristic/A_star_lite.h
+matplotlib-cpp/matplotlibcpp.h
+-
+
+/home/koby/Desktop/cpp/A_star_lite_huristic/utils.h
+bits/stdc++.h
+-
+

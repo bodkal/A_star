@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/A_star.dir/main.cpp.o CMakeFiles/A_star.dir/grid.cpp.o CMakeFiles/A_star.dir/utils.cpp.o CMakeFiles/A_star.dir/A_star_lite.cpp.o  -o A_star 
