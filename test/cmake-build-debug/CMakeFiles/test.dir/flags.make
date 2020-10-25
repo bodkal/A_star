@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++1z
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/koby/vcpkg/packages/matplotlib-cpp_x64-linux/include -I/usr/include/python3.6 
+CXX_INCLUDES = -isystem /usr/include/python2.7 -isystem /home/koby/.local/lib/python2.7/site-packages/numpy/core/include 
 

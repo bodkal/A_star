@@ -13,6 +13,34 @@
   <component name="ChangeListManager">
     <list default="true" id="aed7872c-39c1-40b8-b972-798deddf6f57" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_star/A_star_2d/A_star_2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/A_star/A_star_2d/A_star_2.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/A_star.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/A_star.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeFiles/3.17.3/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeFiles/3.17.3/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeFiles/A_star.dir/A_star_lite.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeFiles/A_star.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeFiles/A_star.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeFiles/A_star.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeFiles/A_star.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeFiles/A_star.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeFiles/A_star.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeFiles/A_star.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeFiles/A_star.dir/grid.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeFiles/A_star.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeFiles/A_star.dir/main.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeFiles/A_star.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeFiles/A_star.dir/utils.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeFiles/A_star_lite.dir/A_star_lite.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeFiles/A_star_lite.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeFiles/A_star_lite.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeFiles/A_star_lite.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeFiles/A_star_lite.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeFiles/A_star_lite.dir/grid.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeFiles/A_star_lite.dir/main.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeFiles/A_star_lite.dir/utils.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/A_star_lite/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +63,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/cpp/A_star" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
@@ -45,9 +73,9 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -71,6 +99,7 @@
       <workItem from="1601547920069" duration="4280000" />
       <workItem from="1601552259918" duration="56000" />
       <workItem from="1601579798659" duration="49000" />
+      <workItem from="1602413942082" duration="140000" />
     </task>
     <servers />
   </component>
@@ -97,11 +126,11 @@
     </state>
     <state x="167" y="127" width="1653" height="855" key="DiffContextDialog/67.27.1853.1053/1920.0.1024.1280@67.27.1853.1053" timestamp="1601375391280" />
     <state x="167" y="127" width="1653" height="855" key="DiffContextDialog/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1601461799048" />
-    <state x="776" y="310" width="424" height="513" key="FileChooserDialogImpl" timestamp="1601579847503">
+    <state x="776" y="310" width="424" height="513" key="FileChooserDialogImpl" timestamp="1602414067806">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1024.1280@67.27.1853.1053" timestamp="1601579847503" />
-    <state x="776" y="310" width="424" height="513" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1601552314472" />
+    <state x="776" y="310" width="424" height="513" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1602414067806" />
     <state width="1807" height="342" key="GridCell.Tab.0.bottom" timestamp="1601552200669">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -171,6 +200,11 @@
           <url>file://$PROJECT_DIR$/A_star/main.cpp</url>
           <line>4</line>
           <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/A_star/A_star_2d/A_star_2.cpp</url>
+          <line>70</line>
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

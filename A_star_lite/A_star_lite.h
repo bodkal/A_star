@@ -17,21 +17,24 @@ private:
         short y;
         float f;
     };*/
-    std::vector<utils::pos> open_list;
-    std::vector<utils::pos> free_node;
-    std::vector<utils::pos> vesit_node;
+   // std::vector<utils::pos> open_list;
+   std::vector<utils::node> open_list;
+    utils::pos next_step(utils::pos point);
     bool father_check(utils::pos u,utils::pos v);
 public:
-    world board{0,0};
-    void get_all_cells(utils::pos father);
+    world board{0,0,5};
+    //void get_all_cells(utils::pos father);
     A_star_lite(utils::pos start,utils::pos goal,world board,std::vector<utils::pos> obs);
+    //void sort_and_insert_to_open_list(utils::pos point);
     void sort_and_insert_to_open_list(utils::pos point);
     void remove_form_open_list();
-
-    std::vector<utils::pos> filtered_move(utils::pos father);
-    void print();
+   utils::pos get_father();
+   // std::vector<utils::pos> filtered_move(utils::pos father);
     void path_search();
     std::vector<utils::pos> get_path();
+    void start_plning();
+    std::vector<utils::pos> obs=std::vector<utils::pos>();
+
 };
 
 

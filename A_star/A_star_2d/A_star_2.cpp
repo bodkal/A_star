@@ -34,7 +34,7 @@ cell* new_cell(short pos[], short g, short f, cell * per);
 vector<Int2> get_path(cell* child);
 vector<Int2> serce(short** board, short start[2], short end[2]);
 
-void main()
+int main()
 {
 
     short** board = new short* [x];
@@ -53,7 +53,7 @@ void main()
     vector<Int2> path3;
 
     path2 = serce(board, start, end);
-    for (auto const& i : path2) {
+    /*for (auto const& i : path2) {
         board[i.pos[0]][i.pos[1]] = -100;
     }
     CSV_create(board);
@@ -67,7 +67,8 @@ void main()
     for (auto const& i : path2) {
         board[i.pos[0]][i.pos[1]] = -100;
     }
-    CSV_create(board);
+    CSV_create(board);*/
+    return 0;
 }
 
 

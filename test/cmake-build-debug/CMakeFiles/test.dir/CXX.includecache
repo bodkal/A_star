@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/koby/Desktop/cpp/test/main.cpp
+iostream
+-
+list
+-
+vector
+-
+math.h
+-
+stdio.h
+-
+chrono
+-
+fstream
+-
+matplotlib-cpp/matplotlibcpp.h
+-
+

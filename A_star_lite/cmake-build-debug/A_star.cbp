@@ -5,7 +5,7 @@
 		<Option title="A_star"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\vcpkg\;CMake Files\..\..\..\vcpkg\scripts\;CMake Files\..\..\..\vcpkg\scripts\buildsystems\;"/>
+		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/koby/Desktop/cpp/A_star_lite/cmake-build-debug"/>
@@ -111,9 +111,6 @@
 		</Unit>
 		<Unit filename="/home/koby/Desktop/cpp/A_star_lite/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
-		</Unit>
-		<Unit filename="/home/koby/Desktop/cpp/A_star_lite/../../../vcpkg/scripts/buildsystems/vcpkg.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\vcpkg\scripts\buildsystems\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

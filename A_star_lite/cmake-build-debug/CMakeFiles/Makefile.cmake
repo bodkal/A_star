@@ -15,7 +15,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/koby/clion-2020.2/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCXXInformation.cmake"
   "/home/koby/clion-2020.2/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
   "/home/koby/clion-2020.2/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCommonLanguageInclude.cmake"
-  "/home/koby/clion-2020.2/bin/cmake/linux/share/cmake-3.17/Modules/CMakeDependentOption.cmake"
   "/home/koby/clion-2020.2/bin/cmake/linux/share/cmake-3.17/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake"
   "/home/koby/clion-2020.2/bin/cmake/linux/share/cmake-3.17/Modules/CMakeFindCodeBlocks.cmake"
   "/home/koby/clion-2020.2/bin/cmake/linux/share/cmake-3.17/Modules/CMakeGenericSystem.cmake"
@@ -38,7 +37,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/koby/clion-2020.2/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux.cmake"
   "/home/koby/clion-2020.2/bin/cmake/linux/share/cmake-3.17/Modules/Platform/UnixPaths.cmake"
   "/home/koby/clion-2020.2/bin/cmake/linux/share/cmake-3.17/Modules/ProcessorCount.cmake"
-  "/home/koby/vcpkg/scripts/buildsystems/vcpkg.cmake"
   )
 
 # The corresponding makefile is:
