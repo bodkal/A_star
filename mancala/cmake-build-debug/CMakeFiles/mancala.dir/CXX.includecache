@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/koby/Desktop/cpp/mancala/game.cpp
+game.h
+/home/koby/Desktop/cpp/mancala/game.h
+
+/home/koby/Desktop/cpp/mancala/game.h
+utils.h
+/home/koby/Desktop/cpp/mancala/utils.h
+iostream
+-
+
+/home/koby/Desktop/cpp/mancala/utils.h
+stdlib.h
+-
+vector
+-
+

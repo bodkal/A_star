@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/mancala.dir/main.cpp.o CMakeFiles/mancala.dir/utils.cpp.o CMakeFiles/mancala.dir/game.cpp.o  -o mancala 
